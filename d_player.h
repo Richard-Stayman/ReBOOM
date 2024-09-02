@@ -71,7 +71,9 @@ typedef enum
   // No damage, no health loss.
   CF_GODMODE          = 2,
   // Not really a cheat, just a debug aid.
-  CF_NOMOMENTUM       = 4
+  CF_NOMOMENTUM       = 4,
+
+  CF_BUDDHA           = 16
 
 } cheat_t;
 

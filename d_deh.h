@@ -631,7 +631,10 @@ extern char* s_STSTR_FAADDED; // = STSTR_FAADDED;
 extern char* s_STSTR_NCON; // = STSTR_NCON;
 //#define STSTR_NCOFF           "No Clipping Mode OFF"
 extern char* s_STSTR_NCOFF; // = STSTR_NCOFF;
-
+//
+extern char* s_STSTR_BON; // "Buddha Mode ON"
+//
+extern char* s_STSTR_BOFF; // "Buddha Mode OFF"
 //#define STSTR_BEHOLD  "inVuln, Str, Inviso, Rad, Allmap, or Lite-amp"
 extern char* s_STSTR_BEHOLD; // = STSTR_BEHOLD;
 //#define STSTR_BEHOLDX "Power-up Toggled"

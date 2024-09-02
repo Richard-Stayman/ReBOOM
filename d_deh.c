@@ -33,8 +33,8 @@
 
 // killough 5/2/98: fixed headers, removed rendunant external declarations:
 
-#ifdef WINDOWS
-#include <string.h>
+#ifndef WINDOWS
+#include <strings.h>
 #endif
 #include "doomdef.h"
 #include "doomstat.h"
@@ -354,6 +354,8 @@ char* s_STSTR_KFAADDED = STSTR_KFAADDED;
 char* s_STSTR_FAADDED = STSTR_FAADDED;
 char* s_STSTR_NCON = STSTR_NCON;
 char* s_STSTR_NCOFF = STSTR_NCOFF;
+char* s_STSTR_BON = STSTR_BON;
+char* s_STSTR_BOFF = STSTR_BOFF;
 char* s_STSTR_BEHOLD = STSTR_BEHOLD;
 char* s_STSTR_BEHOLDX = STSTR_BEHOLDX;
 char* s_STSTR_CHOPPERS = STSTR_CHOPPERS;

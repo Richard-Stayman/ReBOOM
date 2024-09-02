@@ -769,14 +769,17 @@ void P_DamageMobj(mobj_t *target,mobj_t *inflictor, mobj_t *source, int damage)
         }
 
       player->health -= damage;       // mirror mobj health here for Dave
-      if (player->health < 0)
-        player->health = 0;
+      if (player->cheats & CF_BUDDHA && player->health < 1)
+        player->health = 1;
+      else
+        if (player->health < 0)
+          player->health = 0;
 
       player->attacker = source;
-      player->damagecount += damage;  // add damage after armor / invuln
+      player->damagecount += damage;	// add damage after armor / invuln
 
       if (player->damagecount > 100)
-        player->damagecount = 100;  // teleport stomp does 10k points...
+        player->damagecount = 100;	// teleport stomp does 10k points...
 
       temp = damage < 100 ? damage : 100;
 
@@ -786,7 +789,12 @@ void P_DamageMobj(mobj_t *target,mobj_t *inflictor, mobj_t *source, int damage)
 
   // do the damage
   target->health -= damage;
-  if (target->health <= 0)
+  if (player && player->cheats & CF_BUDDHA && target->health < 1)
+  {
+    target->health = 1;
+  }
+  else
+    if (target->health <= 0)
     {
       P_KillMobj (source, target);
       return;

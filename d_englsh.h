@@ -369,6 +369,9 @@
 #define STSTR_NCON      "No Clipping Mode ON"
 #define STSTR_NCOFF     "No Clipping Mode OFF"
 
+#define STSTR_BON       "Buddha Mode ON"
+#define STSTR_BOFF      "Buddha Mode OFF"
+
 #define STSTR_BEHOLD    "inVuln, Str, Inviso, Rad, Allmap, or Lite-amp"
 #define STSTR_BEHOLDX   "Power-up Toggled"
 

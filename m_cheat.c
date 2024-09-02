@@ -53,6 +53,7 @@ static void cheat_fa();
 static void cheat_k();
 static void cheat_kfa();
 static void cheat_noclip();
+static void cheat_buddha();
 static void cheat_pw();
 static void cheat_behold();
 static void cheat_clev();
@@ -121,6 +122,9 @@ struct cheat_s cheat[] = {
 
   {"idclip",     "No Clipping 2",     not_net | not_demo,
    cheat_noclip },
+
+   {"buddha",     "Buddha",     not_net | not_demo,
+     cheat_buddha },
 
   {"idbeholdv",  "Invincibility",     not_net | not_demo,
    cheat_pw,  pw_invulnerability },
@@ -348,6 +352,15 @@ static void cheat_noclip()
 
   plyr->message = (plyr->cheats ^= CF_NOCLIP) & CF_NOCLIP ? 
     s_STSTR_NCON : s_STSTR_NCOFF; // Ty 03/27/98 - externalized
+}
+
+static void cheat_buddha()
+{
+  // Simplified, accepting both "noclip" and "idspispopd".
+  // no clipping mode cheat
+
+  plyr->message = (plyr->cheats ^= CF_BUDDHA) & CF_BUDDHA ?
+  s_STSTR_BON : s_STSTR_BOFF; // Ty 03/27/98 - externalized
 }
 
 // 'behold?' power-up cheats (modified for infinite duration -- killough)
